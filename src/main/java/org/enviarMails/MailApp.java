@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.scene.control.Alert;
 
@@ -11,6 +12,9 @@ public class MailApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+
+        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/Images/emailicon.png"))); // Asegúrate de que la ruta sea correcta
+
         primaryStage.setTitle("Enviar Mails");
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/MailView.fxml"));
         Parent root = loader.load();
