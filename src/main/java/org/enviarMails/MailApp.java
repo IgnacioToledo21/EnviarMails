@@ -13,7 +13,7 @@ public class MailApp extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/Images/emailicon.png"))); // Asegúrate de que la ruta sea correcta
+        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/Images/emailicon.png"))); //Icono de la ventana
 
         primaryStage.setTitle("Enviar Mails");
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/MailView.fxml"));
@@ -22,11 +22,11 @@ public class MailApp extends Application {
         primaryStage.show();
     }
 
-    /**
-     * Metodo para mostrar una alerta de éxito.
-     *
-     * @param controller El controlador de la ventana, para poder acceder a los campos.
-     */
+
+//  Metodo para mostrar una alerta de éxito.
+//
+//  @param controller El controlador de la ventana, para poder acceder a los campos.
+
     public static void mostrarExitoEnvio(EnviarMailController controller) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Mensaje enviado");
@@ -40,11 +40,11 @@ public class MailApp extends Application {
         controller.getMensajeArea().clear();
     }
 
-    /**
-     * Metodo para mostrar una alerta de error.
-     *
-     * @param errorMessage El mensaje de error a mostrar.
-     */
+
+//  Metodo para mostrar una alerta de error.
+//
+//  @param errorMessage El mensaje de error a mostrar.
+
     public static void mostrarErrorEnvio(String errorMessage) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Error al enviar correo");
